@@ -11,3 +11,16 @@ splitText.forEach(el => {
     <span>${el}</span>
   `;
 });
+
+let char = 0;
+let timer = setInterval(onTick, 50);
+
+function onTick() {
+  const span = text.querySelectorAll("span")[char];
+  span.classList.add("fade");
+  char++;
+  if (char === splitText.length) {
+    Complete();
+    return;
+  }
+}
