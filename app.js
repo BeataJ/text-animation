@@ -20,7 +20,12 @@ function onTick() {
   span.classList.add("fade");
   char++;
   if (char === splitText.length) {
-    Complete();
+    complete();
     return;
   }
+}
+
+function complete() {
+  clearInterval(timer);
+  timer = null;
 }
